@@ -1,66 +1,69 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ♻️ ComPartilhe — Plataforma de Economia Solidária e Moda Circular
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> **Aplicação web para gestão de feiras de troca, circulação de moedas sociais e acompanhamento de doações no Instituto Federal do Paraná (IFPR) - Câmpus Paranaguá.**
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 Sobre o Projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+O **ComPartilhe** é uma iniciativa de cunho social, ambiental e educacional desenvolvida no **Instituto Federal do Paraná (IFPR - Câmpus Paranaguá)**. Seu objetivo principal é combater os impactos socioambientais do *fast fashion* promovendo a **moda circular**, a **economia solidária** e o **consumo consciente**.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A aplicação web foi desenvolvida para digitalizar e otimizar a gestão das feiras de troca, substituindo o controle manual por uma plataforma centralizada capaz de:
+- Gerenciar o acervo/estoque de peças doadas (roupas, calçados, livros, eletrônicos, etc.);
+- Controlar o saldo de **créditos sociais** (moeda alternativa do clube de trocas);
+- Registrar as transações de entrada e saída de itens de forma ágil e segura;
+- Gerar histórico estruturado de dados para futuros estudos de mensuração de impacto ambiental (ex: créditos de carbono).
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Tecnologias Utilizadas
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+O projeto foi modernizado e containerizado para fácil execução e implantação em qualquer ambiente.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Backend:** [PHP 8.2+](https://www.php.net/) / [Laravel Framework](https://laravel.com/)
+* **Autenticação & Scaffolding:** [Laravel Jetstream](https://jetstream.laravel.com/) (Fortify / Sanctum)
+* **Frontend:** [Blade Templates](https://laravel.com/docs/blade), [Tailwind CSS](https://tailwindcss.com/), [Bootstrap](https://getbootstrap.com/), [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+* **Banco de Dados:** [MySQL](https://www.mysql.com/)
+* **Containerização:** [Docker](https://www.docker.com/) & [Laravel Sail](https://laravel.com/docs/sail)
+* **Gerenciamento de Assets:** [Vite](https://vitejs.dev/)
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 🛠️ Como Executar o Projeto Localmente
 
-### Premium Partners
+### Pré-requisitos
+* [Docker](https://docs.docker.com/get-docker/) e [Docker Compose](https://docs.docker.com/compose/install/) instalados na máquina.
+* Git.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Passo a Passo
 
-## Contributing
+1. **Clonar o repositório:**
+   ```bash
+   git clone [https://github.com/AlexandreH4564/compartilhe-tcc.git](https://github.com/AlexandreH4564/compartilhe-tcc.git)
+   cd compartilhe-tcc
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+2. **Copiar o arquivo de variáveis de ambiente:**
+   ```bash
+   cp .env.example .env
 
-## Code of Conduct
+3. **Subir os containers com o Laravel Sail:**
+   ```bash
+   ./vendor/bin/sail up -d
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+4. **Gerar a chave da aplicação:**
+   ```bash
+   ./vendor/bin/sail artisan key:generate
 
-## Security Vulnerabilities
+5. **Executar as migrações do banco de dados:**
+   ```bash
+   ./vendor/bin/sail artisan migrate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+6. **Instalar e compilar as dependências do Frontend (Assets):**
+   ```bash
+    ./vendor/bin/sail npm install
+    ./vendor/bin/sail npm run build
 
-## License
+7. **Acessar a aplicação:**
+   ```bash
+   Abra o seu navegador e acesse: http://localhost
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
